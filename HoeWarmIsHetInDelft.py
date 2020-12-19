@@ -23,7 +23,7 @@ def get_temp_from_html():
     ifrm_3_soup = BeautifulSoup(ifrm_3_html, features='html.parser')
     temperature_span = ifrm_3_soup.find(id='ajaxtemp')
     temperature = get_temperature(temperature_span.text)
-    print(f'Temperature from HTML: {temperature}°C')
+    print(f'Temperature from HTML: {temperature} degrees Celsius')
 
 
 def get_updated_temp():
@@ -33,7 +33,7 @@ def get_updated_temp():
     data = server_response.read().decode()
     temp = data.split(' ')[4]
     temp = round(float(temp))
-    print(f'Temperature from server: {temp}°C')
+    print(f'Temperature from server: {temp} degrees Celsius')
 
 
 if __name__ == '__main__':
