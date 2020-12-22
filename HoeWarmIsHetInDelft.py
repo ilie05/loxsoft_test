@@ -5,8 +5,7 @@ from datetime import datetime
 
 def get_temperature(text):
     temp = text.split('°')[0]
-    temp = temp.strip()
-    temp = float(temp)
+    temp = float(temp.strip())
     return round(temp)
 
 
